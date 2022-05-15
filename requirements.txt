@@ -7,4 +7,3 @@ datetime
 joblib
 db-sqlite3
 scikit-learn
-pickle
