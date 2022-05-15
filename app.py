@@ -10,8 +10,15 @@ from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import pickle
 
-pipe_lr = pickle.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
 
+
+def tokenize(data):    
+    data = word_tokenize(data)
+    porter = PorterStemmer()
+    stem_data = [porter.stem(word) for word in data]
+    return stem_data
+
+pipe_lr = pickle.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
 
 def predire_emotions(docx):
     results = pipe_lr.predict([docx])
