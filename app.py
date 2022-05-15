@@ -5,10 +5,9 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 from datetime import datetime
+import pickle
 
-
-import joblib
-pipe_lr = joblib.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
+pipe_lr = pickle.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
 
 
 def predire_emotions(docx):
