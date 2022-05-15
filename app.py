@@ -6,9 +6,8 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
-
-import joblib
-pipe_lr = joblib.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
+import pickle
+pipe_lr = pickle.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
 
 
 def predire_emotions(docx):
