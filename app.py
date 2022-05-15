@@ -5,6 +5,7 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 from datetime import datetime
+import nltk
 from nltk import word_tokenize
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
