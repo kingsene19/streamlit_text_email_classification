@@ -1,0 +1,9 @@
+altair
+plotly
+streamlit
+pandas
+numpy
+datetime
+joblib
+db-sqlite3
+scikit-learn
