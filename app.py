@@ -7,7 +7,6 @@ import numpy as np
 from datetime import datetime
 import pickle
 
-import pickle
 pipe_lr = pickle.load(open("emotion_classifier_pipe_lr.pkl", "rb"))
 
 
