@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 import pickle
 
 
-nltk.download()
+nltk.download("punkt")
 def tokenize(data):    
     data = word_tokenize(data)
     porter = PorterStemmer()
