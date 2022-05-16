@@ -8,3 +8,4 @@ joblib
 db-sqlite3
 scikit-learn
 nltk
+regex
