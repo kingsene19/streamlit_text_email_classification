@@ -1,6 +1,7 @@
 from track_utils import create_page_visited_table, add_page_visited_details, view_all_page_visited_details, add_prediction_details, view_all_prediction_details, create_emotionclf_table
 import streamlit as st
 import altair as alt
+import re
 import plotly.express as px
 import pandas as pd
 import numpy as np
@@ -13,7 +14,13 @@ import pickle
 
 
 nltk.download("punkt")
-def tokenize(data):    
+def tokenize(data): 
+    data = re.sub("(<.*?>)", "", data)
+    data = re.sub(r'http\S+', '', data)
+    data= re.sub(r"(#[\d\w\.]+)", '', data)
+    data= re.sub(r"(@[\d\w\.]+)", '', data)
+    data = re.sub("(\\W|\\d)", " ", data)
+    data = data.strip() 
     data = word_tokenize(data)
     porter = PorterStemmer()
     stem_data = [porter.stem(word) for word in data]
